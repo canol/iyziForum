@@ -1,0 +1,428 @@
+body
+{
+	background-color: #ffffff;
+	font-family: "Verdana", "DeJavu Sans", sans-serif;
+	color: #000000;
+	font-size: 14px;
+	line-height: 22px;
+	text-align: center;
+}
+
+img
+{
+	vertical-align: middle;
+}
+
+h1, h2, p, form
+{
+	margin: 0px;
+}
+
+h2
+{
+	margin-bottom: 5px;
+	padding: 0;
+	font-size: 15px;
+	color: #000000;
+	font-weight: bold;
+	text-align: left;
+	line-height: 15px;
+}
+
+p
+{
+	margin-bottom: 10px;
+}
+
+a:link, a:visited
+{
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+a:link img, a:visited img, a:active img, a:hover img
+{
+	border-width: 0px;
+}
+
+input, textarea
+{
+	padding: 4px;
+	font-size: 14px;
+	line-height: 20px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+button
+{
+	margin-top: 10px;
+}
+
+div.MainWrapper
+{
+	width: 62%;
+	margin-left:auto;
+	margin-right: auto;
+	text-align: Left;
+}
+
+div.Logo
+{
+	margin-bottom: 15px;
+	font-family: "Arial", "FreeSans", "Calibri", sans-serif;
+	font-size: 45px;
+	line-height: 60px;
+	color: #000000;
+}
+
+div.Logo a:hover
+{
+	text-decoration: none;
+}
+
+div.Menu
+{
+	margin-bottom: 15px;
+	color: #000000;
+	font-size: 14px;
+	line-height: 28px;
+}
+
+div.Menu a
+{
+	cursor: pointer;
+	margin-right: 4px;
+	padding: 4px;
+	background-color: #005208;
+	background: -moz-linear-gradient(top, #31a03b, #005208);
+	background: -webkit-gradient(linear, left top, left bottom, from(#31a03b), to(#005208));
+	font-family: "Arial", "FreeSans", "Calibri", "Verdana", sans-serif;
+	color: #ffffff;
+	font-size: 13px;
+	line-height: 20px;
+	text-shadow: #313131 -1px -1px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #005208;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+div.Menu a:hover
+{
+	background-color: #006109;
+	background: -moz-linear-gradient(top, #2eac39, #006109);
+	background: -webkit-gradient(linear, left top, left bottom, from(#2eac39), to(#006109));
+	text-decoration: none;
+}
+
+div.Registration, div.Login, div.PostMessage
+{
+	margin-bottom: 15px;
+	padding: 4px;
+	background-color: #eeeeee;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+div.Registration, div.Login
+{
+	width: 270px;
+}
+
+div.PostMessage
+{
+	width: 400px;
+}
+
+div.Registration input[type="text"], div.Registration input[type="password"], div.Login input[type="text"], div.Login input[type="password"], div.PostMessage input[type="text"], div.PostMessage textarea
+{
+	width: 92%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #313131;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+div.Registration input[type="text"], div.Registration input[type="password"], div.Login input[type="text"], div.Login input[type="password"]
+{
+	width: 92%;
+}
+
+div.PostMessage input[type="text"], div.PostMessage textarea
+{
+	width: 390px;
+}
+
+div.Registration button, div.Login button, div.PostMessage button
+{
+	background: -moz-linear-gradient(top, #919191, #525252);
+	background: -webkit-gradient(linear, left top, left bottom, from(#919191), to(#525252));
+	font-family: "Arial", "FreeSans", "Calibri", "Verdana", sans-serif;
+	color: #ffffff;
+	font-size: 13px;
+	line-height: 20px;
+	text-shadow: #313131 -1px -1px;
+	font-weight: bold;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #313131;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+div.Registration button:hover, div.Login button:hover, div.PostMessage button:hover
+{
+	background: -moz-linear-gradient(top, #a2a2a2, #707070);
+	background: -webkit-gradient(linear, left top, left bottom, from(#a2a2a2), to(#707070));
+}
+
+div.Registration .Small, div.Login .Small
+{
+	font-size: 11px;
+	line-height: 17px;
+}
+
+div.Navigation
+{
+	margin-bottom: 15px;
+	padding: 4px;
+	background-color: #000343;
+	background: -moz-linear-gradient(top, #41448b, #191b37);
+	background: -webkit-gradient(linear, left top, left bottom, from(#41448b), to(#191b37));
+	font-family: "Arial", "FreeSans", "Calibri", "Verdana", sans-serif;
+	color: #ffffff;
+	font-size: 13px;
+	line-height: 20px;
+	text-shadow: #313131 -1px -1px;
+	font-weight: bold;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000343;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+div.Navigation a
+{
+	color: #ffffff;
+}
+
+table.TopicList, table.MemberList, table.MemberDetails
+{
+	margin-bottom: 15px;
+	width: 100%;
+	/* padding: 4px;
+	background-color: #E9FFE7;
+	background: -moz-linear-gradient(top, #2c8233, #002503); */
+	color: #000000;
+	font-size: 14px;
+	line-height: 28px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+table.TopicList th, table.MemberList th, table.MemberDetails th
+{
+	padding: 4px;
+	background-color: #251822;
+	background: -moz-linear-gradient(top, #683a5b, #251822);
+	background: -webkit-gradient(linear, left top, left bottom, from(#683a5b), to(#251822));
+	font-family: "Arial", "FreeSans", "Calibri", "Verdana", sans-serif;
+	color: #ffffff;
+	font-size: 13px;
+	line-height: 24px;
+	text-shadow: #313131 -1px -1px;
+}
+
+table.TopicList td, table.MemberList td, table.MemberDetails td
+{
+	padding: 4px;
+	color: #000000;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+table.TopicList td span.Small
+{
+	font-size: 11px;
+	line-height: 17px;
+}
+
+table.TopicList td a
+{
+	color: #000000;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: bold;
+}
+
+table.TopicList td a:hover
+{
+	text-decoration: underline;
+}
+
+table.TopicList td.Dark1, table.MemberList td.Dark1, table.MemberDetails td.Dark1
+{
+	background-color: #eeeeee;
+}
+
+table.TopicList td.Dark2, table.MemberList td.Dark2, table.MemberDetails td.Dark2
+{
+	background-color: #e0e0e0;
+}
+
+table.TopicList td.Light1, table.MemberList td.Light1, table.MemberDetails td.Light1
+{
+	background-color: #eeeeee;
+}
+
+table.TopicList td.Light2, table.MemberList td.Light2, table.MemberDetails td.Light2
+{
+	background-color: #e0e0e0;
+}
+
+div.Footer
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+div.Footer span.Small
+{
+	font-size: 11px;
+	line-height: 17px;
+}
+
+div.Warning
+{
+	background-color: #FFEEEE;
+	border-color: #E63939;
+}
+
+div.Post
+{
+	margin-bottom: 15px;
+	padding: 4px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #525252;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+div.Post table.Information
+{
+	width: 100%;
+}
+
+div.Post table.Information span.Small
+{
+	font-size: 11px;
+	line-height: 17px;
+}
+
+div.Post table.Information a
+{
+	font-size: 16px;
+	line-height: 22px;
+}
+
+div.Post table.Information.Light
+{
+	background-color: #d0d0d0;
+	padding: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d0d0d0;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+div.Post table.Information.Dark
+{
+	background-color: #bdbdbd;
+	padding: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #bdbdbd;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+div.Post.Light
+{
+	background-color: #eeeeee;
+}
+
+div.Post.Dark
+{
+	background-color: #e0e0e0;
+}
+
+div.Post h1
+{
+	font-size: 14px;
+	line-height: 22px;
+}
+
+div.Post div.Subject, div.Post div.Body
+{
+	padding: 5px;
+}
+
+div.Post div.Body.Editable:hover
+{
+	/*background-color: #ffffff;*/
+}
+
+div.PostOperationButtons
+{
+	padding: 5px;
+	text-align: right;
+}
+
+div.Signature
+{
+	margin-top: 20px;
+	font-style: italic;
+}
+
+div.Pages
+{
+	text-align: right;
+}
+
+div.Pages span.CurrentPage
+{
+	font-size: 17px;
+	font-weight: bold;
+}
