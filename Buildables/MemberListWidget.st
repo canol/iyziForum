@@ -18,7 +18,9 @@ Iliad.ILWidget subclass: MemberListWidget [
 	members [
 		<category: 'accessing'>
 		
-		self members: (self application memberRepository members).
+		members := self application memberRepository members select: [:each | each status ~= MemberStatuses deleted].
+		members := members asSortedCollection: [:member1 :member2 |
+			member1 memberName < member2 memberName].
 		
 		^members
 	]

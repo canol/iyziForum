@@ -1,5 +1,5 @@
 User subclass: Member [
-	| memberName password emailAddress hideEmail registrationDateTime lastPresenceDateTime remember |
+	| memberName password emailAddress hideEmail registrationDateTime lastPresenceDateTime remember status |
 	
 	<category: 'IyziForum'>
 	<comment: nil>
@@ -22,6 +22,7 @@ User subclass: Member [
 		self registrationDateTime: DateTime now.
 		self lastPresenceDateTime: DateTime now.
 		self remember: false.
+		self status: MemberStatuses active.
 	]
 
 	memberName [
@@ -112,5 +113,17 @@ User subclass: Member [
 		<category: 'accessing'>
 		
 		remember := aString.
+	]
+
+	status [
+		<category: 'accessing'>
+		
+		^status
+	]
+	
+	status: aMemberStatus [
+		<category: 'accessing'>
+		
+		status := aMemberStatus.
 	]
 ]

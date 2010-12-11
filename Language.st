@@ -26,10 +26,13 @@ Object subclass: Language [
 			at: 'Admin Information' put: 'Admin Information';
 			at: 'Admin Panel' put: 'Admin Panel';
 			at: 'April' put: 'April';
+			at: 'Are you sure you want to delete this member?' put: 'Are you sure you want to delete this member?';
 			at: 'Are you sure you want to log out?' put: 'Are you sure you want to log out?';
 			at: 'August' put: 'August';
 			at: 'Cancel' put: 'Cancel';
 			at: 'December' put: 'December';
+			at: 'Delete Member' put: 'Delete Member';
+			at: 'Edit Member Details' put: 'Edit Member Details';
 			at: 'Email' put: 'Email';
 			at: 'Email Address:' put: 'Email Address:';
 			at: 'February' put: 'February';
@@ -47,9 +50,12 @@ Object subclass: Language [
 			at: 'Member Details' put: 'Member Details';
 			at: 'Member Name:' put: 'Member Name:';
 			at: 'Members' put: 'Members';
+			at: 'Membership Deleted' put: 'Membership Deleted';
 			at: 'Moderator' put: 'Moderator';
 			at: 'My Details' put: 'My Details';
 			at: 'Name, Lastname' put: 'Name, Lastname';
+			at: 'New Password:' put: 'New Password:';
+			at: 'New Password Again:' put: 'New Password Again:';
 			at: 'New Post' put: 'New Post';
 			at: 'Next' put: 'Next';
 			at: 'No' put: 'No';
@@ -72,13 +78,13 @@ Object subclass: Language [
 			at: 'Registered On:' put: 'Registered On:';
 			at: 'Remember me' put: 'Remember me';
 			at: 'Reply' put: 'Reply';
+			at: 'Save' put: 'Save';
 			at: 'Search' put: 'Search';
 			at: 'Secret Answer:' put: 'Secret Answer:';
 			at: 'Send' put: 'Send';
 			at: 'September' put: 'September';
 			at: 'Setup' put: 'Setup';
-			at: 'Show All Members' put: 'Show All Members';
-			at: 'Show Pending Members' put: 'Show Pending Members';
+			at: 'Succesfully saved the member details.' put: 'Succesfully saved the member details.';
 			at: 'The email address you entered has already been registered. Please enter another email address or contact the forum admin via {EmailAddress} email address.' put: 'The email address you entered has already been registered. Please enter another email address or contact the forum admin via {EmailAddress} email address.';
 			at: 'The member name cannot be longer than {MaxMemberNameCharacterCount} characters.' put: 'The member name cannot be longer than {MaxMemberNameCharacterCount} characters.';
 			at: 'The member name cannot be shorter than {MinMemberNameCharacterCount} characters.' put: 'The member name cannot be shorter than {MinMemberNameCharacterCount} characters.';
@@ -103,8 +109,10 @@ Object subclass: Language [
 			at: 'You cannot leave the question empty.' put: 'You cannot leave the question empty.';
 			at: 'You cannot leave the secret answer empty.' put: 'You cannot leave the secret answer empty.';
 			at: 'You cannot leave the subject empty.' put: 'You cannot leave the subject empty.';
+			at: 'You don''t have permission to edit these details.' put: 'You don''t have permission to edit these details.';
 			at: 'You entered a wrong member name or a member with this member name is not registered.' put: 'You entered a wrong member name or a member with this member name is not registered.';
-			at: 'You entered a wrong password.' put: 'You entered a wrong password.'.
+			at: 'You entered a wrong password.' put: 'You entered a wrong password.';
+			at: 'You should first login to edit member details.' put: 'You should first login to edit member details.'.
 	]
 	
 	forumVersion [

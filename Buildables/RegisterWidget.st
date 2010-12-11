@@ -222,6 +222,7 @@ FormOnMenuWidget subclass: RegisterWidget [
 				self application user: member.
 				self application menuWidget markDirty.
 				self application memberListWidget markDirty.
+				self application editMemberDetailsWidget markDirty.
 				self application topicListWidget markDirty].
 	]
 ]

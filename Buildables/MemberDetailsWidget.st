@@ -89,6 +89,36 @@ Iliad.ILWidget subclass: MemberDetailsWidget [
 											
 										tr td
 											text: ((self application postRepository posts select: [:post | post member = self member]) size) printString;
-											class: 'Dark2']]]]]]
+											class: 'Dark2'].
+											
+									(self application isBoardMember: self application user)
+										ifTrue: [
+											table tr build: [:tr |
+												tr td
+													colspan: 2;
+													class: 'Buttons';
+													build: [:td |
+														td button
+															text: (self application translate: 'Edit Member Details');
+															onClickDo: [self application redirectToLocal: 'member/', (self application memberRepository members indexOf: self member) printString, '/edit'].
+															
+														td text: ' '.
+															
+														td button
+															text: (self application translate: 'Delete Member');
+															onClickDo: [
+																| dialogWidget |
+																
+																dialogWidget := DialogWidget new.
+																dialogWidget addButton: DialogAnswerTypes no.
+																dialogWidget addButton: DialogAnswerTypes yes.
+																dialogWidget addMessage: (self application translate: 'Are you sure you want to delete this member?').
+																
+																self
+																	lightbox: dialogWidget
+																	onAnswer: [:answer |
+																		(answer = DialogAnswerTypes yes)
+																			ifTrue: [
+																				self application deleteMember: self member]]]]]]]]]]]
 	]
 ]

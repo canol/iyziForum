@@ -64,11 +64,6 @@ input, textarea
 	border-radius: 3px;
 }
 
-button
-{
-	margin-top: 10px;
-}
-
 div.MainWrapper
 {
 	width: 62%;
@@ -139,6 +134,11 @@ div.Registration, div.Login, div.PostMessage
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
+}
+
+div.Registration button, div.Login button, div.PostMessage button
+{
+	margin-top: 10px;
 }
 
 div.Registration, div.Login
@@ -228,7 +228,7 @@ div.Navigation a
 	color: #ffffff;
 }
 
-table.TopicList, table.MemberList, table.MemberDetails
+table.TopicList, table.MemberList, table.MemberDetails, table.EditMemberDetails
 {
 	margin-bottom: 15px;
 	width: 100%;
@@ -246,7 +246,7 @@ table.TopicList, table.MemberList, table.MemberDetails
 	border-radius: 3px;
 }
 
-table.TopicList th, table.MemberList th, table.MemberDetails th
+table.TopicList th, table.MemberList th, table.MemberDetails th, table.EditMemberDetails th
 {
 	padding: 4px;
 	background-color: #251822;
@@ -259,7 +259,7 @@ table.TopicList th, table.MemberList th, table.MemberDetails th
 	text-shadow: #313131 -1px -1px;
 }
 
-table.TopicList td, table.MemberList td, table.MemberDetails td
+table.TopicList td, table.MemberList td, table.MemberDetails td, table.EditMemberDetails td
 {
 	padding: 4px;
 	color: #000000;
@@ -286,24 +286,30 @@ table.TopicList td a:hover
 	text-decoration: underline;
 }
 
-table.TopicList td.Dark1, table.MemberList td.Dark1, table.MemberDetails td.Dark1
+table.TopicList td.Dark1, table.MemberList td.Dark1, table.MemberDetails td.Dark1, table.EditMemberDetails td.Dark1
 {
 	background-color: #eeeeee;
 }
 
-table.TopicList td.Dark2, table.MemberList td.Dark2, table.MemberDetails td.Dark2
+table.TopicList td.Dark2, table.MemberList td.Dark2, table.MemberDetails td.Dark2, table.EditMemberDetails td.Dark2
 {
 	background-color: #e0e0e0;
 }
 
-table.TopicList td.Light1, table.MemberList td.Light1, table.MemberDetails td.Light1
+table.TopicList td.Light1, table.MemberList td.Light1, table.MemberDetails td.Light1, table.EditMemberDetails td.Light1
 {
 	background-color: #eeeeee;
 }
 
-table.TopicList td.Light2, table.MemberList td.Light2, table.MemberDetails td.Light2
+table.TopicList td.Light2, table.MemberList td.Light2, table.MemberDetails td.Light2, table.EditMemberDetails td.Light2
 {
 	background-color: #e0e0e0;
+}
+
+table.TopicList td.Buttons, table.MemberList td.Buttons, table.MemberDetails td.Buttons, table.EditMemberDetails td.Buttons
+{
+	background-color: #b3b3b3;
+	text-align: right;
 }
 
 div.Footer

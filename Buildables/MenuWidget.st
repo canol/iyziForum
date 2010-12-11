@@ -150,7 +150,7 @@ Iliad.ILWidget subclass: MenuWidget [
 				self application user loggedIn
 					ifTrue: [
 						e a
-							href: '#';
+							action: [self application redirectToLocal: 'member/', (self application memberRepository members indexOf: self application user) printString, '/edit'];
 							text: (self application translate: 'My Details').
 							
 						e a

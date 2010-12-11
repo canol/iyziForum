@@ -1,6 +1,6 @@
 Iliad.ILApplication subclass: IyziForum [
 	| user title languageRepository memberRepository postRepository settingList
-	menuWidget navigationWidget topicListWidget postListWidget memberListWidget memberDetailsWidget |
+	menuWidget navigationWidget topicListWidget postListWidget memberListWidget memberDetailsWidget editMemberDetailsWidget |
 	
 	<category: 'IyziForum-Buildables'>
 	<comment: nil>
@@ -162,17 +162,31 @@ Iliad.ILApplication subclass: IyziForum [
 				memberId := self router route next.
 				member := self memberRepository members at: memberId asInteger.
 				
-				self navigationWidget
-					clear;
-					addUrl: 'members' text: (self translate: 'Members');
-					addText: member memberName.
-				
-				self title: self settingList forumTitle, ' - ', (self translate: 'Member Details').
-				
 				self menuWidget beNeutralMode.
-				self memberDetailsWidget member: member.
-				
-				^self memberPageContents]
+				(self router route atEnd)
+					ifTrue: [
+						self navigationWidget
+							clear;
+							addUrl: 'members' text: (self translate: 'Members');
+							addText: member memberName.
+						
+						self title: self settingList forumTitle, ' - ', (self translate: 'Member Details').
+						
+						self memberDetailsWidget member: member.
+						
+						^self memberDetailsPageContents]
+					ifFalse: [
+						self navigationWidget
+							clear;
+							addUrl: 'members' text: (self translate: 'Members');
+							addUrl: ('member/', (self application memberRepository members indexOf: member) printString) text: member memberName;
+							addText: (self translate: 'Edit Member Details').
+						
+						self title: self settingList forumTitle, ' - ', (self translate: 'Edit Member Details').
+						
+						self editMemberDetailsWidget member: member.
+						
+						^self editMemberDetailsPageContents]]
 	]
 	
 	footerContents [
@@ -265,7 +279,7 @@ Iliad.ILApplication subclass: IyziForum [
 				build: self footerContents]
 	]
 	
-	memberPageContents [
+	memberDetailsPageContents [
 		<category: 'building'>
 			
 		^[:e |
@@ -275,6 +289,20 @@ Iliad.ILApplication subclass: IyziForum [
 				build: self menuWidget;
 				build: self application navigationWidget;
 				build: self memberDetailsWidget;
+				build: self application navigationWidget;
+				build: self footerContents]
+	]
+	
+	editMemberDetailsPageContents [
+		<category: 'building'>
+			
+		^[:e |
+			e div
+				class: 'MainWrapper';
+				build: self headerContents;
+				build: self menuWidget;
+				build: self application navigationWidget;
+				build: self editMemberDetailsWidget;
 				build: self application navigationWidget;
 				build: self footerContents]
 	]
@@ -349,6 +377,18 @@ Iliad.ILApplication subclass: IyziForum [
 		<category: 'accessing'>
 		
 		memberDetailsWidget := aMemberDetailsWidget.
+	]
+	
+	editMemberDetailsWidget [
+		<category: 'accessing'>
+		
+		^editMemberDetailsWidget ifNil: [editMemberDetailsWidget := EditMemberDetailsWidget new]
+	]
+	
+	editMemberDetailsWidget: anEditMemberDetailsWidget [
+		<category: 'accessing'>
+		
+		editMemberDetailsWidget := anEditMemberDetailsWidget.
 	]
 	
 	memberRepository [
@@ -446,7 +486,10 @@ Iliad.ILApplication subclass: IyziForum [
 				
 				cookie := Iliad.ILCookie key: 'Password' value: self user password.
 				cookie expireIn: (Duration days: 365).
-				aResponse addCookie: cookie]].
+				aResponse addCookie: cookie].
+			
+			(self user status = MemberStatuses deleted)
+				ifTrue: [self logout]].
 
 		super respondOn: aResponse.
 	]
@@ -463,7 +506,14 @@ Iliad.ILApplication subclass: IyziForum [
 		self user: Guest new.
 		self menuWidget markDirty.
 		self memberDetailsWidget markDirty.
+		self editMemberDetailsWidget markDirty.
 		self application postListWidget markDirty.
+	]
+	
+	deleteMember: aMember [
+		<category: 'actions'>
+		
+		aMember status: MemberStatuses deleted.
 	]
 	
 	isAdmin: aMember [

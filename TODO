@@ -1,0 +1,8 @@
+0.1
+---
+
+ - Add editing and deleting facilities for posts
+ + Add editing and deleting facilities for members
+ - One universal dialog widget to show successful actions, errors and warnings.
+ - Add a simple admin panel which allows backing up all the data
+ - Add license information, copyright notices etc...

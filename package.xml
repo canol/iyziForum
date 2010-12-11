@@ -1,6 +1,5 @@
 <package>
 	<name>IyziForum</name>
-	<url>git://github.com/ZuLuuuuuu/iyziForum.git</url>
 	<namespace>IyziForum</namespace>
 	<prereq>Iliad</prereq>
 	<prereq>MD5</prereq>
@@ -11,6 +10,7 @@
 	<filein>Guest.st</filein>
 	<filein>Language.st</filein>
 	<filein>Member.st</filein>
+	<filein>MemberStatuses.st</filein>
 	<filein>MenuWidgetModes.st</filein>
 	<filein>Post.st</filein>
 	<filein>Time.st</filein>
@@ -19,6 +19,7 @@
 	<filein>Data/PostRepository.st</filein>
 	<filein>Data/SettingList.st</filein>
 	<filein>Buildables/DialogWidget.st</filein>
+	<filein>Buildables/EditMemberDetailsWidget.st</filein>
 	<filein>Buildables/FormOnMenuWidget.st</filein>
 	<filein>Buildables/LoginWidget.st</filein>
 	<filein>Buildables/MemberDetailsWidget.st</filein>
@@ -39,6 +40,7 @@
 	<file>Guest.st</file>
 	<file>Language.st</file>
 	<file>Member.st</file>
+	<file>MemberStatuses.st</file>
 	<file>MenuWidgetModes.st</file>
 	<file>Post.st</file>
 	<file>THANKS</file>
@@ -48,6 +50,7 @@
 	<file>Data/PostRepository.st</file>
 	<file>Data/SettingList.st</file>
 	<file>Buildables/DialogWidget.st</file>
+	<file>Buildables/EditMemberDetailsWidget.st</file>
 	<file>Buildables/FormOnMenuWidget.st</file>
 	<file>Buildables/LoginWidget.st</file>
 	<file>Buildables/MemberDetailsWidget.st</file>

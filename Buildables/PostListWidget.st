@@ -118,7 +118,13 @@ Iliad.ILWidget subclass: PostListWidget [
 													ifTrue: [
 														td span
 															class: 'Small';
-															text: ' (', (self application translate: 'Moderator'), ')']].
+															text: ' (', (self application translate: 'Moderator'), ')'].
+												
+												(post member status = MemberStatuses deleted)
+													ifTrue: [
+														td span
+															class: 'Small';
+															text: ' (', (self application translate: 'Membership Deleted'), ')']].
 										tr td
 											build: [:td |
 												td

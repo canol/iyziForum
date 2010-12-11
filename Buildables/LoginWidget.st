@@ -110,7 +110,7 @@ FormOnMenuWidget subclass: LoginWidget [
 
 		members := self application memberRepository members select: [:each | each memberName = self memberName].
 
-		((self application memberRepository members select: [:each | each memberName = self memberName]) isEmpty)
+		((self application memberRepository members select: [:each | (each memberName = self memberName) and: [each status ~= MemberStatuses deleted]]) isEmpty)
 			ifTrue: [
 				errorDialogWidget addMessage: (self application translate: 'You entered a wrong member name or a member with this member name is not registered.')]
 			ifFalse: [
@@ -127,6 +127,7 @@ FormOnMenuWidget subclass: LoginWidget [
 				self application user: member.
 				self application menuWidget markDirty.
 				self application memberDetailsWidget markDirty.
+				self application editMemberDetailsWidget markDirty.
 				self application postListWidget markDirty]
 			ifFalse: [
 				self lightbox: errorDialogWidget].
