@@ -1,5 +1,6 @@
 <package>
 	<name>IyziForum</name>
+	<url>git://github.com/ZuLuuuuuu/iyziForum.git</url>
 	<namespace>IyziForum</namespace>
 	<prereq>Iliad</prereq>
 	<prereq>MD5</prereq>
